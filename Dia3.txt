@@ -1,0 +1,66 @@
+HTML
+¿Qué es la codificación de caracteres?
+es un set de caracteres universal,un estándar en el que se definen todos los caracteres necesarios para la escritura que se usan en la computadora. Su objetivo es ser un superconjunto de todos los sets de caracteres que se hayan codificado.Los caracteres representan letras del abecedario, signos de puntuación y otros símbolos.
+
+¿Qué es el código ascii?
+ el conjunto de símbolos y caracteres ya utilizados en aquel momento en telegrafía por la compañía Bell. En un primer momento solo incluía letras mayúsculas y números, pero en 1967 se agregaron las letras minúsculas y algunos caracteres de control, formando así lo que se conoce como US-ASCII, es decir los caracteres del 0 al 127.Conocido como aski
+
+¿Qué es una etiqueta?
+significa que está escrito con códigos que puede leer una persona sin que sea necesario compilarlo primero. En otras palabras, el texto en una página web está «marcado» con estos códigos 
+
+¿En cuántas partes se divide un documento HTML?
+se divide en dos, la cabecera y el cuerpo
+
+¿En qué parte del documento HTML se pone el título y el idioma?
+<head>: delimita la parte de la cabecera del documento. La cabecera contiene información sobre el propio documento HTML, como por ejemplo su título y el idioma de la página.
+
+¿En qué parte del documento HTML se pone el contenido, texto e imágenes?
+<body>: delimita el cuerpo del documento HTML. El cuerpo encierra todos los contenidos que se muestran al usuario (párrafos de texto, imágenes, tablas). 
+
+¿Para qué sirve la etiqueta head?
+delimita la parte de la cabecera del documento. La cabecera contiene información sobre el propio documento HTML
+
+¿Para qué sirve la etiqueta body?
+delimita el cuerpo del documento HTML. El cuerpo encierra todos los contenidos que se muestran al usuario (párrafos de texto, imágenes, tablas).
+
+¿Para qué sirve la etiqueta em?
+puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
+
+¿Para qué sirve la etiqueta del?
+deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
+
+¿Qué son los atributos?
+son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
+
+¿Qué atributo se utiliza para identificar el elemento HTML?
+el ID de un identificador único en el ámbito de todo el documento para un elemento.
+
+¿Qué atributo se utiliza para establecer estilos por medio clase(s) CSS al elemento HTML?
+lo reciben de la etiqueta BODY definida en la css. Las dos siguientes, en rojo, reciben todas sus características de la etiqueta P, también definida en la css
+
+¿Qué atributo se utiliza para establecer estilos directamente al elemento HTML?
+Estilo en línea (Inline): utilizando el atributo style.
+Estilo interno (Internal): usando un elemento "style".
+Estilo externo (External): empleando un archivo CSS (Cascading Style Sheets) externo al documento HTML.
+
+¿Qué atributo se utiliza para establecer un título al elemento HTML?
+Vínculo : el título o la descripción del documento vinculado 
+Elemento mediático como una imagen : una descripción o créditos asociados
+Párrafo : una nota de pié de página o comentario acerca de este 
+Cita : alguna información sobre el autor y otros datos .
+
+¿Para qué se utilizan los atributos de internacionalización?
+los utilizan las páginas que muestran sus contenidos en varios idiomas. Atributos de eventos: sólo se utilizan en las páginas web dinámicas creadas con JavaScript.
+
+¿Para que se utilizan los atributos de eventos?
+se utilizan en las páginas web que incluyen código JavaScript para realizar acciones dinámicas sobre los elementos de la página.
+
+¿Para qué se utilizan los atributos de foco?
+selecciona un elemento en una aplicación, se dice que "el elemento tiene el foco del programa". Si por ejemplo un usuario pincha con su ratón sobre un cuadro de texto y comienza a escribir, ese cuadro de texto tiene el foco del programa, llamado "focus"
+
+¿Cual es la diferencia entre elemento y etiqueta HTML?
+Elementos: son declaraciones para visualizar o dar forma a una página Web.
+Etiquetas: son marcas insertadas en un documento HTML para proporcionar información sobre una unidad o contenido.
+
+¿Cual es la diferencia entre elementos en bloque y en línea?
+De forma predeterminada, los elementos de bloque comienzan en una nueva línea, pero los elementos en línea pueden comenzar en cualquier parte de una línea.

@@ -1,0 +1,118 @@
+
+DIA 2
+
+HTML - Capítulo 1
+Escribe 4 definiciones de ¿Qué es HTML?
+	1. El lenguaje de marcado de hipertexto (HTML) es un lenguaje informático que 
+	forma parte de la mayoría de las páginas web y aplicaciones en línea. Un hipertexto 
+	es un texto que se utiliza para enlazar con otros textos, mientras que un lenguaje 
+	de marcado es una serie de marcas que indican a los servidores web la estructura y 
+	el estilo de un documento.
+	
+	2.HTML es el lenguaje con el que se define el contenido de las páginas web.
+	Básicamente se trata de un conjunto de etiquetas que sirven para definir el texto 
+	y otros elementos que compondrán una página web, como imágenes y listas
+
+	3.Es un lenguaje de marcado que se utiliza para el desarrollo de páginas de 
+	Internet. Se trata de la sigla que corresponde a HyperText Markup Language, es 
+	decir, Lenguaje de Marcas de Hipertexto, que podría ser traducido como Lenguaje 
+	de Formato de Documentos para Hipertexto.
+
+	4.Las siglas HTML quieren decir HyperText Markup Language lo cual significa 
+	“lenguajes de marcas de hipertexto”, se basa en un lenguaje de marcas para crear 
+	documentos que puedan ser distribuidos por Internet
+
+¿Qué es la W3C?
+El Consorcio WWW, en inglés: World Wide Web Consortium, es un consorcio internacional que 
+genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a 
+largo plazo.​
+Escribe 3 definiciones de ¿Qué es hipertexto?
+	1.Sistema de organización y presentación de datos que se basa en la vinculación 
+	de fragmentos textuales o gráficos a otros fragmentos, lo cual permite al usuario 
+	acceder a la información no necesariamente de forma secuencial sino desde 
+	cualquiera de los distintos ítems relacionados.
+	
+	2.El hipertexto es una estructura no secuencial que permite crear, agregar, 
+	enlazar y compartir información de diversas fuentes por medio de enlaces 
+	asociativos y redes sociales. El hipertexto es texto que contiene enlaces a otros 
+	textos. 
+
+	3.Hipertexto es un texto que está vinculado a otra locación en el mismo documento 
+	o a diferentes documentos en la misma computadora o en Internet.
+
+¿Qué es una etiqueta HTML?
+
+Resultado de imagen para Qué es una etiqueta HTML?
+Las etiquetas HTML son fragmentos de código que nos permiten crear elementos HTML. 
+Los elementos son la estructura básica de HTML. Dichos elementos tienen dos propiedades 
+básicas: atributos y contenido. ... A parte de las etiquetas y el contenido, un elemento
+ puede tener atributos.
+
+¿Cual es la última versión de HTML?
+HTML 5
+
+¿Qué es un XML?
+
+Resultado de imagen para ¿Qué es un XML?
+XML es el acrónimo de Extensible Markup Language, es decir, es un lenguaje de marcado que 
+define un conjunto de reglas para la codificación de documentos. ... El lenguaje XML 
+proporciona una plataforma para definir elementos para crear un formato y generar un 
+lenguaje personalizado.
+
+¿Qué es un DTD?
+Una definición de tipo de documento o DTD es una descripción de estructura y sintaxis 
+de un documento XML o SGML. Su función básica es la descripción de la estructura de datos, 
+para usar una estructura común y mantener la consistencia entre todos los documentos que
+ utilicen la misma DTD
+
+¿Para qué sirve un JavaScript?
+JavaScript es el único lenguaje de programación que funciona en los navegadores de forma 
+nativa (lenguaje interpretado sin necesidad de compilación). Por tanto se utiliza como 
+complemento de HTML y CSS para crear páginas webs.
+
+¿Para qué sirve un CSS?
+CSS (en inglés Cascading Style Sheets) es lo que se denomina lenguaje de hojas de estilo 
+en cascada y se usa para estilizar elementos escritos en un lenguaje de marcado como HTML. 
+CSS separa el contenido de la representación visual del sitio
+
+¿Cual es la ventaja de separar los contenidos HTML y CSS?
+el permitir que las páginas descarguen con mayor rapidez; mediante la separación se mejora 
+la accesibilidad y escaneabilidad del contenido; la simplicidad para crear versiones 
+dependiendo de los dispositivos (tablets, teléfonos inteligentes o dispositivos móviles, 
+entre otros), etc
+
+PROGRAMACIÓN
+Describe con tus propias palabras qué es la fase de análisis.
+En esta fase de piensa en los requerimientos que necesitamos para antes de empezar
+a programar, los datos, las variables, etc.
+
+Describe con tus propias palabras qué es la fase de diseño.
+En la fase de diseño se crea una imagen de lo que se desea programar, nos podemos 
+apoyar en diagramas de flujo, pseudocodigo.
+
+Describe con tus propias palabras qué es la fase de Compilación y Ejecución.
+Cuando se dice compilación entiendo que es la parte donde la computadora procesa el
+codigo y verifica que esta bien de sintaxis y la ejecución es cuando ejecuta los comandos
+que programamos se refiere mas a la lógica de nuestro programa.
+
+Describe con tus propias palabras qué es la fase de Verificación.
+Esta fase la entiendo como revisar que el programa cumpla con el funcionamiento para el 
+que fue creado.
+
+Describe con tus propias palabras qué es la fase de Depuración.
+Es cuando nos damos a la tarea de reconocer y corregir los errores que pudiera contener
+nuestro codigo
+
+Describe con tus propias palabras qué es la fase de Mantenimiento.
+Se puede entender como las modificaciones o mejoras que le podemos hacer a nuestro codigo
+
+Describe con tus propias palabras qué es la fase de Documentación.
+Esta fase sirve para reportar el funcionamiento de nuestro codigo, como ejemplo pueden ser
+los manuales de ususario.
+
+¿Qué es compilar?
+Analizar si el codigo se encuentra con la sistaxis correcta y convertir el codigo 
+a lenguaje maquina
+
+¿Qué es depurar?
+Identificar y corregir errores en el codigo
