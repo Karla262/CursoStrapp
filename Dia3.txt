@@ -2,7 +2,7 @@ HTML
 �Qu� es la codificaci�n de caracteres?
 es un set de caracteres universal,un est�ndar en el que se definen todos los caracteres necesarios para la escritura que se usan en la computadora. Su objetivo es ser un superconjunto de todos los sets de caracteres que se hayan codificado.Los caracteres representan letras del abecedario, signos de puntuaci�n y otros s�mbolos.
 
-�Qu� es el c�digo ascii?
+�Que es el c�digo ascii?
  el conjunto de s�mbolos y caracteres ya utilizados en aquel momento en telegraf�a por la compa��a Bell. En un primer momento solo inclu�a letras may�sculas y n�meros, pero en 1967 se agregaron las letras min�sculas y algunos caracteres de control, formando as� lo que se conoce como US-ASCII, es decir los caracteres del 0 al 127.Conocido como aski
 
 �Que es una etiqueta?
