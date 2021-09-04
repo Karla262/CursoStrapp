@@ -1,0 +1,67 @@
+HTML
+�Qu� es la codificaci�n de caracteres?
+es un set de caracteres universal,un est�ndar en el que se definen todos los caracteres necesarios para la escritura que se usan en la computadora. Su objetivo es ser un superconjunto de todos los sets de caracteres que se hayan codificado.Los caracteres representan letras del abecedario, signos de puntuaci�n y otros s�mbolos.
+
+�Qu� es el c�digo ascii?
+ el conjunto de s�mbolos y caracteres ya utilizados en aquel momento en telegraf�a por la compa��a Bell. En un primer momento solo inclu�a letras may�sculas y n�meros, pero en 1967 se agregaron las letras min�sculas y algunos caracteres de control, formando as� lo que se conoce como US-ASCII, es decir los caracteres del 0 al 127.Conocido como aski
+
+�Que es una etiqueta?
+significa que est� escrito con c�digos que puede leer una persona sin que sea necesario compilarlo primero. En otras palabras, el texto en una p�gina web est� �marcado� con estos c�digos 
+
+�En cu�ntas partes se divide un documento HTML?
+se divide en dos, la cabecera y el cuerpo
+
+�En qu� parte del documento HTML se pone el t�tulo y el idioma?
+<head>: delimita la parte de la cabecera del documento. La cabecera contiene informaci�n sobre el propio documento HTML, como por ejemplo su t�tulo y el idioma de la p�gina.
+
+�En qu� parte del documento HTML se pone el contenido, texto e im�genes?
+<body>: delimita el cuerpo del documento HTML. El cuerpo encierra todos los contenidos que se muestran al usuario (p�rrafos de texto, im�genes, tablas). 
+
+�Para qu� sirve la etiqueta head?
+delimita la parte de la cabecera del documento. La cabecera contiene informaci�n sobre el propio documento HTML
+
+�Para qu� sirve la etiqueta body?
+delimita el cuerpo del documento HTML. El cuerpo encierra todos los contenidos que se muestran al usuario (p�rrafos de texto, im�genes, tablas).
+
+�Para qu� sirve la etiqueta em?
+puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de �nfasis.
+
+�Para qu� sirve la etiqueta del?
+deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
+
+�Qu� son los atributos?
+son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
+
+�Qu� atributo se utiliza para identificar el elemento HTML?
+el ID de un identificador �nico en el �mbito de todo el documento para un elemento.
+
+�Qu� atributo se utiliza para establecer estilos por medio clase(s) CSS al elemento HTML?
+lo reciben de la etiqueta BODY definida en la css. Las dos siguientes, en rojo, reciben todas sus caracter�sticas de la etiqueta P, tambi�n definida en la css
+
+�Qu� atributo se utiliza para establecer estilos directamente al elemento HTML?
+Estilo en l�nea (Inline): utilizando el atributo style.
+Estilo interno (Internal): usando un elemento "style".
+Estilo externo (External): empleando un archivo CSS (Cascading Style Sheets) externo al documento HTML.
+
+�Qu� atributo se utiliza para establecer un t�tulo al elemento HTML?
+V�nculo : el t�tulo o la descripci�n del documento vinculado 
+Elemento medi�tico como una imagen : una descripci�n o cr�ditos asociados
+P�rrafo : una nota de pi� de p�gina o comentario acerca de este 
+Cita : alguna informaci�n sobre el autor y otros datos .
+
+�Para qu� se utilizan los atributos de internacionalizaci�n?
+los utilizan las p�ginas que muestran sus contenidos en varios idiomas. Atributos de eventos: s�lo se utilizan en las p�ginas web din�micas creadas con JavaScript.
+
+�Para que se utilizan los atributos de eventos?
+se utilizan en las p�ginas web que incluyen c�digo JavaScript para realizar acciones din�micas sobre los elementos de la p�gina.
+
+�Para qu� se utilizan los atributos de foco?
+selecciona un elemento en una aplicaci�n, se dice que "el elemento tiene el foco del programa". Si por ejemplo un usuario pincha con su rat�n sobre un cuadro de texto y comienza a escribir, ese cuadro de texto tiene el foco del programa, llamado "focus"
+
+�Cual es la diferencia entre elemento y etiqueta HTML?
+Elementos: son declaraciones para visualizar o dar forma a una p�gina Web.
+Etiquetas: son marcas insertadas en un documento HTML para proporcionar informaci�n sobre una unidad o contenido.
+
+�Cual es la diferencia entre elementos en bloque y en l�nea?
+De forma predeterminada, los elementos de bloque comienzan en una nueva l�nea, pero los elementos en l�nea pueden comenzar en cualquier parte de una l�nea.
+
