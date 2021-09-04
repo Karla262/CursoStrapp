@@ -116,3 +116,56 @@ a lenguaje maquina
 
 ¿Qué es depurar?
 Identificar y corregir errores en el codigo
+
+SGML es un acrónimo de Standard Generalized Markup Language o Lenguaje de Señalización General Normalizado. 
+Esta es una norma ISO derivada de una anterior (GML de IBM). SGML permite que la estructura de un documento 
+pueda ser definida en base a la relación lógica de sus partes. es un archivo de documento que está escrito en 
+el lenguaje de marcado generalizado estándar, abreviado como SGML. Los formatos de archivo incluyen etiquetas
+ que se utilizan para describir la estructura del contenido y la información que se compone de varios tipos de 
+ información que incluyen gráficos, vídeo y datos de audio y de texto e información de base de datos. De manera 
+ similar a las extensiones de archivos XML, archivos SGML se están referenciados como Tipo de Documento archivos
+  DTD Definición o. Estos tipos de archivos describen las etiquetas que se encuentran dentro del documento. 
+  Los programas que se pueden abrir extensiones de archivo SGML incluyen Adobe FrameMaker 10, Corel WordPerfect 
+  Office X6, JW y epcEdit. 
+
+Ejemplo de html:
+  <html>
+	<head>
+		<title>Mi página de ejemplo</title>
+	</head>
+	<body>
+	Aquí va el contenido
+	</body>
+</html>
+
+Buscar un ejemplo de XML.
+INSERT INTO XMLTEST.XML_DOCUMENTS (ID, XML_DATA)
+VALUES(1,
+      '<BOOK publication_date="2009-01-01">' ||
+      ' <TITLE> OmniFind Text Search Server for DB2 </TITLE>' ||
+      ' <ID_NUMBER> 1 ></ID_NUMBER>' ||
+      ' <CHAPTER>' ||
+      '   <NUMBER> 1 </NUMBER>' ||
+      '   <TITLE> Introducción </TITLE>' ||
+      '   <ABSTRACT> Este capítulo presentará al lector las prestaciones de OmniFind
+                     for DB2 for IBM i </ABSTRACT>' ||
+      ' </CHAPTER>'||
+      ' <CHAPTER>' ||
+      '   <NUMBER> 2 </NUMBER>' ||
+      '   <TITLE> Crear un índice de búsqueda de texto </TITLE>' ||
+      '   <ABSTRACT> Este capítulo describirá cómo crear un índice de búsqueda de texto </ABSTRACT>' ||
+      ' </CHAPTER>' ||
+
+
+	  XHTML significa lenguaje de marcado de hipertexto extendido.
+
+Se utiliza para generar documentos y contenidos de hipertexto generalmente publicados en la Web. 
+Es una reformulación del lenguaje HTML que ahora pasa a ser compatible con el estándar XML, considerándose 
+que se incluye en la familia de los Lenguajes de Marcado.
+
+<select name=”sexo”> 
+			   <option value=”hombre” select="selected">Hombre</option>
+			   <option value=”mujer” >Mujer</option>
+		</select>
+
+		
