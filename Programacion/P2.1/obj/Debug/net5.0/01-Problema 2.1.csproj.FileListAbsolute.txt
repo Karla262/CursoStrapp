@@ -1,0 +1,16 @@
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.exe
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.deps.json
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.runtimeconfig.json
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.runtimeconfig.dev.json
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.dll
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\ref\01-Problema 2.1.dll
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\bin\Debug\net5.0\01-Problema 2.1.pdb
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.csproj.AssemblyReference.cache
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.AssemblyInfoInputs.cache
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.AssemblyInfo.cs
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.csproj.CoreCompileInputs.cache
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.dll
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\ref\01-Problema 2.1.dll
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.pdb
+C:\Users\ZeroRoa\Documents\CursoStrapps\Programa\HTML\Programacion\01-Problema 2.1\obj\Debug\net5.0\01-Problema 2.1.genruntimeconfig.cache
