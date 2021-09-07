@@ -71,7 +71,7 @@ La etiqueta <dfn>, se utiliza para realizar la definición de un término. El ef
 es el de fuente cursiva, pero su significado semántico no es el mismo.
 
 ¿Qué tipo de elemento es la etiqueta dfn?
-De linea 
+De linea.
 
     
 
