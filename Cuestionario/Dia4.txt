@@ -1,0 +1,83 @@
+DIA 4
+
+HTML
+¿Para qué sirve la etiqueta p?
+El elemento p (párrafo) es el apropiado para distribuir el texto en párrafos. 
+Sus etiquetas son: <p> y </p> (la de cierre es opcional).
+
+¿Qué tipo de elemento es la etiqueta p?
+En linea
+
+¿Para qué sirven las etiquetas h1, h2, h3, h4, h5 y h6?
+
+Los elementos de encabezado implementan seis niveles de encabezado del documento, 
+<h1> es el más importante, y <h6> , el menos importante.
+
+¿Cuál de las etiquetas h1, h2, h3, h4, h5 y h6 es la de mayor importancia?
+La etiqueta h1
+
+¿Cuál de las etiquetas h1, h2, h3, h4, h5 y h6 es la de menor importancia?
+La h6
+
+¿Qué tipo de elementos son las etiquetas h1, h2, h3, h4, h5 y h6?
+De bloque
+
+¿Para qué sirve la etiqueta em?
+El elemento HTML <em> es el apropiado para marcar con énfasis las partes importantes de un texto.
+ El elemento <em> puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
+
+¿Para qué sirve la etiqueta strong?
+Gran importancia; hace que el texto sobresalga del texto circundante; normalmente se muestra en negrita
+
+¿Qué tipo de elemento es la etiqueta em?
+De Linea 
+
+¿Qué tipo de elemento es la etiqueta strong?
+De linea 
+
+¿Para qué sirve la etiqueta del?
+Definición. El elemento del (deleted-borrado) marca las partes de un texto o documento que han sido 
+suprimidas o sustituidas. Sus etiquetas son: <del> y </del> (ambas obligatorias). 
+
+¿Para qué sirve la etiqueta ins?
+Definición. El elemento ins (insertado) marca las partes de un texto que han sido añadidos al documento. 
+Sus etiquetas son: <ins> e </ins> (ambas obligatorias). 
+
+¿Qué tipo de elemento es la etiqueta del?
+Crea una caja: a veces en linea a veces en bloque.
+
+¿Qué tipo de elemento es la etiqueta ins?
+Crea una caja: a veces en linea a veces en bloque.
+
+¿Para qué sirve la etiqueta blockquote?
+El elemento blockquote permite a los autores insertar citas en forma de bloques de contenido, 
+usualmente compuestas por un párrafo, un grupo de párrafos o un conjunto de muchos otros elementos 
+incluyendo imágenes (img), tablas (table) y artículos (article), entre otros. Esta es la principal 
+diferencia entre este elemento y q, que está diseñado para citar únicamente líneas de texto.
+
+¿Qué tipo de elemento es la etiqueta blockquote?
+Un elemento de Bloque.
+
+¿Para qué sirve la etiqueta abbr?
+sta etiqueta no tiene una utilidad funcional visible para los usuarios, pero en algunos navegadores 
+se puede ver la función al pasar el puntero del mouse por la palabra etiquetada, resaltando el significado 
+de la palabra, además esta etiqueta ayuda a que los buscadores entiendan mejor el contenido de la página.
+
+¿Qué tipo de elemento es la etiqueta abbr?
+Elemento de linea
+
+¿Para qué sirve la etiqueta dfn?
+La etiqueta <dfn>, se utiliza para realizar la definición de un término. El efecto visual en el navegador 
+es el de fuente cursiva, pero su significado semántico no es el mismo.
+
+¿Qué tipo de elemento es la etiqueta dfn?
+De linea 
+
+    
+
+    
+    HTML
+Lectura del Capítulo 3. Texto.
+3.1. Estructurar
+3.2. Marcado básico de texto
+3.3. Marcado avanzado de texto
