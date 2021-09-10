@@ -1,0 +1,40 @@
+Dia 5
+HTML
+¿Para qué sirve la etiqueta span?
+La etiqueta <spam> también funciona como un contenedor, por ejemplo para destacar 
+una palabra o expresión dentro de un párrafo,para encerrar 
+esa palabra o expresión y luego ponerle un estilo mediante un atributo. 
+
+¿Qué tipo de elemento es la etiqueta span?
+Un elemento de linea
+
+¿Cómo se interpreta visualmente los espacios en blanco, tabuladores, 
+retornos de carro y carácter de nueva línea en un navegador?
+La razón de este comportamiento es que HTML ignora todos los espacios en blanco sobrantes, 
+es decir, todos los espacios en blanco que no son el espacio en blanco que separa las palabras.
+
+¿Para qué sirve la etiqueta br?
+El elemento HTML line break <br> produce un salto de línea en el texto (retorno de carro).
+
+¿A qué equivale el texto &nbsp;?
+La solución al problema de los espacios en blanco no es tan sencilla como el de las nuevas líneas. 
+Para incluir espacios en blanco adicionales, se debe sustituir cada nuevo espacio en blanco por el texto &nbsp; 
+(es importante incluir el símbolo & al principio y el símbolo ; al final).
+
+¿Para qué sirve la etiqueta pre?
+En estos casos, se puede utiliza la etiqueta <pre>, que muestra el texto tal y como se ha escrito, 
+respetando todos los espacios en blanco y todas las nuevas líneas.
+
+¿Qué tipo de elemento es la etiqueta pre?
+De bloque
+
+¿Para qué sirve la etiqueta code?
+se utiliza para mostrar código fuente de cualquier lenguaje de programación.
+
+¿Qué tipo de elemento es la etiqueta code?
+En linea
+
+¿Cuándo utilizar la codificación de caracteres especiales?
+Los caracteres que utiliza HTML para definir sus etiquetas (<, > y ") no se pueden utilizar libremente.
+Los caracteres propios de los idiomas que no son el inglés (ñ, á, ç, ¿, ¡, etc.) pueden ser problemáticos 
+dependiendo de la codificación de caracteres utilizada.
