@@ -1,0 +1,5 @@
+C:\Users\richa\CursoStrapp\PROGRAMACION\CAPITULO 2\11-SINTAXIS\obj\Debug\net5.0\11-SINTAXIS.csproj.AssemblyReference.cache
+C:\Users\richa\CursoStrapp\PROGRAMACION\CAPITULO 2\11-SINTAXIS\obj\Debug\net5.0\11-SINTAXIS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\richa\CursoStrapp\PROGRAMACION\CAPITULO 2\11-SINTAXIS\obj\Debug\net5.0\11-SINTAXIS.AssemblyInfoInputs.cache
+C:\Users\richa\CursoStrapp\PROGRAMACION\CAPITULO 2\11-SINTAXIS\obj\Debug\net5.0\11-SINTAXIS.AssemblyInfo.cs
+C:\Users\richa\CursoStrapp\PROGRAMACION\CAPITULO 2\11-SINTAXIS\obj\Debug\net5.0\11-SINTAXIS.csproj.CoreCompileInputs.cache
