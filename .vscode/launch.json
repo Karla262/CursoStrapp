@@ -1,24 +1,42 @@
 {
-    // Use IntelliSense para saber los atributos posibles.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/bin/Debug/net5.0/01-PROBLEMA 2.1.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "c:\\Users\\richa\\CursoStrapp\\PROGRAMACION\\CAPITULO 2",
+      "environment": [],
+      "program": "c:\\Users\\richa\\CursoStrapp\\PROGRAMACION\\CAPITULO 2\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "setupCommands": [
         {
-            "name": ".NET Core Launch (console)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/bin/Debug/net5.0/01-PROBLEMA 2.1.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1",
-            "console": "internalConsole",
-            "stopAtEntry": false
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ]
+    }
+  ]
 }
