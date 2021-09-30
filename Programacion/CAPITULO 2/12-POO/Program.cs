@@ -51,7 +51,7 @@ namespace _12_POO
             
             //Se inicializa primero el objeto dirección
             empleado1.Direccion = new Direccion();
-            empleado1.Direccion.Calle = "Av Coyoacan";
+            empleado1.Direccion.Calle = "Av. Coyoacan";
             empleado1.Direccion.NumeroExterior = "1035";
             empleado1.Direccion.NumeroInterior = "11";
 

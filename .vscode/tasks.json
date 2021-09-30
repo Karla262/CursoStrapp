@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/01-PROBLEMA 2.1.csproj",
+                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/05-EJEMPLO 2.5/05-EJEMPLO 2.5.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/01-PROBLEMA 2.1.csproj",
+                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/05-EJEMPLO 2.5/05-EJEMPLO 2.5.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/01-PROBLEMA 2.1.csproj",
+                "${workspaceFolder}/PROGRAMACION/CAPITULO 2/05-EJEMPLO 2.5/05-EJEMPLO 2.5.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

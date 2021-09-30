@@ -62,18 +62,18 @@ es solvente entonces la empresa acepta el pedido; en caso contrario, rechazará 
 correspondiente.
 
 -- 1.-PRINCIPAL
-1.- Inicio
-2.- Pedir el numero de cliente
-3.- Buscar al cliente dentro de la banco de datos -> Esto manda a llamar un subAlgoritmo 2
-4.- Si el cliente existe hacer lo siguiente
-	4.1 Si existe
-		4.1.1- Pedir al cliente el total del pedido
-		4.1.2- Validar si el cliente es solvente contra el total del pedido
-			Si es solvente se acepta el pedido
-			Si no es solvente se rechaza el pedido
-	4.2 Si no existe
-		4.2.1 Mandar mensaje de que no existe
-6.- Fin 
+		1.- Inicio
+		2.- Pedir el numero de cliente
+		3.- Buscar al cliente dentro de la banco de datos -> Esto manda a llamar un subAlgoritmo 2
+		4.- Si el cliente existe hacer lo siguiente
+			4.1 Si existe
+				4.1.1- Pedir al cliente el total del pedido
+				4.1.2- Validar si el cliente es solvente contra el total del pedido
+					Si es solvente se acepta el pedido
+					Si no es solvente se rechaza el pedido
+			4.2 Si no existe
+				4.2.1 Mandar mensaje de que no existe
+		6.- Fin 
 
 
 -- 2.- Busqueda y regresa un cliente
@@ -467,3 +467,104 @@ c = 6
 a + b = c ? son Inguales?
 a + c = b ? son iguales?
 b + c = a ? son iguales?
+
+---------------------------------------------------------------------------------
+Persona
+	Nombre
+	Apellido Paterno
+	Apellido Materno
+	Sexo
+	Fecha Nacimiento
+
+Empleado	
+
+	Datos, Propiedades
+	--------------------------
+	Nombre 
+	Apellido Paterno
+	Apellido Materno
+	Sexo
+	RFC
+	Telefono
+	Email
+	Fecha de Nacimiento
+	Nacionalidad
+	Puesto
+	Fecha Ingreso
+	Salario Diario
+	Numero Seguro Social
+	Horario
+	Total Faltas
+	Direccion
+		Calle
+		Numero exterior
+		Numero interior
+		Colonia
+		Municipio
+		Estado
+		Codigo Postal
+	
+
+	Comportamientos, Funcion Miembro, Metodo
+	----------------------------------------
+	Obtener edad
+	Obtener Antiguedad
+
+
+ALUMNO
+
+	Datos Propiedades
+	-------------------
+	Id Alumno
+	Numero Matricula
+	Nombre
+	Apellido Paterno
+	Apelllido Materno
+	Fecha de Nacimiento
+	Sexo
+	Carrera
+	Fecha Ingreso
+	Materias Cursadas (horario)
+	Semestre
+	Direccion
+		Calle
+		Numero exterior
+		Numero interior
+		Colonia
+		Municipio
+		Estado
+		Codigo Postal
+	
+
+	Comportamientos, funcion Miembro Metodo
+	------------------------
+	Obtener Generacion
+
+
+CLIENTES
+	Datos Propiedades
+	-------------------
+		Id Cliente
+		Numero Cliente
+		Nombre
+		Correo
+		Telefono
+		Fecha Afiliacion
+		Ingresos mensuales
+		Saldo (Adeudo)
+		Historial Crediticio
+		Historial SAT
+		Direccion
+			Calle
+			Numero exterior
+			Numero interior
+			Colonia
+			Municipio
+			Estado
+			Codigo Postal
+		
+
+		Comportamientos funcion miembro Metodo
+		--------------------------------------
+
+

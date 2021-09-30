@@ -2,17 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": ".NET Core Launch (console)",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1/bin/Debug/net5.0/01-PROBLEMA 2.1.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/PROGRAMACION/CAPITULO 2/01-PROBLEMA 2.1",
-      "console": "internalConsole",
-      "stopAtEntry": false
-    },
-    {
       "name": ".NET Core Attach",
       "type": "coreclr",
       "request": "attach"
@@ -23,9 +12,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "c:\\Users\\richa\\CursoStrapp\\PROGRAMACION\\CAPITULO 2",
+      "cwd": "c:\\Users\\richa\\CursoStrapp\\PROYECTOS\\01-EMPLEADOS",
       "environment": [],
-      "program": "c:\\Users\\richa\\CursoStrapp\\PROGRAMACION\\CAPITULO 2\\build\\Debug\\outDebug",
+      "program": "c:\\Users\\richa\\CursoStrapp\\PROYECTOS\\01-EMPLEADOS\\build\\Debug\\outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",

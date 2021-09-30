@@ -1,0 +1,137 @@
+<h1>Alta de personal</h1>
+
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+<fieldset>
+    <legend>Información básica</legend>
+    <br><br>
+    <table>
+        <tr>
+            <td><label for="nombre">Nombre: </label></td>
+            <td><input type="text" name="nombre" id="nombre"></td>
+            <td><label for="apellidop">Apellido Paterno: </label></td>
+            <td><input type="text" name="paterno" id="paterno"></td>
+            <td><label for="apellidom">Apellido Materno: </label></td>
+            <td><input type="text" name="materno" id="materno"></td>
+        </tr>
+    </table>
+    <br><br>
+</fieldset>
+
+<fieldset>
+    <legend>Datos personales</legend>
+    <br><br>
+    <table>
+        <tr>
+            <td><label for="sexo">Sexo:</label></td>
+            <td>
+                <select id="slcsexo" name="slcSexo">
+                    <option value="seleccionasexo" selected="selected">- Selecciona -</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+            </td>
+
+            <td><label for="curp">CURP:</label></td>
+            <td><input type="text" name="curp" id="curp" maxlength="18"></td>
+
+            <td><label for="fechanacimiento">Fecha de nacimiento:</label></td>
+            <td><input type="date" name="nacimiento" value="nacimiento"></td>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nacionalidad">Nacionalidad:</label></td>
+            <td>
+                <select name="slcNacionalidad" id="slcnacionalidad">
+                    <option value="seleccionaN" selected="selected">- Selecciona -</option>
+                    <option value="mexicana">Mexicana</option>
+                    <option value="extranjera">Extranjera</option>
+                </select>
+            </td>
+            <td><label for="rfc">RFC:</label></td>
+            <td><input type="text" name="rfc" id="rfc"></td>
+            <td><label for="nns">NSS:</label></td>
+            <td><input type="text" name="nss" id="nss"></td>
+        </tr>
+    </table>
+    <br><br>
+</fieldset>
+
+<fieldset>
+    <legend>Domicilio</legend>
+    <br><br>
+    <table>
+        <tr>
+            <td><label for="calle">Calle:</label></td>
+            <td><input type="text" name="calle" id="calle"></td>
+            <td><label for="numeroi">Numero interior:</label></td>
+            <td><input type="text" name="numeroi" id="numeroi"></td>
+            <td><label for="numeroe">Numero exterior:</label></td>
+            <td><input type="text" name="numeroe" id="numeroe"></td>
+        </tr>
+        <tr>
+            <td><label for="colonia">Colonia:</label></td>
+            <td><input type="text" name="colonia" id="colonia"></td>
+            <td><label for="municipio">Municipio:</label></td>
+            <td><input type="text" name="municipio" id="municipio"></td>
+            <td><label for="estado">Estado:</label></td>
+            <td>
+                <select name="slcEstado" id="slcestado">
+                    <option value="seleccionaN" selected="selected">- Selecciona -</option>
+                    <option value="aguas">Aguas Calientes</option>
+                    <option value="bajacnorte">Baja California Norte</option>
+                    <option value="bajacsur">Baja California Sur</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="cp">Codigo Postal:</label></td>
+            <td><input type="text" name="cp" id="cp"></input></td>
+        </tr>
+    </table>
+    <br><br>
+</fieldset>
+<fieldset>
+    <legend>Datos Laborales</legend>
+    <br><br>
+    <table>
+        <tr>
+            <td><label for="puesto">Puesto:</label></td>
+            <td>
+                <select name="slcPuesto" id="slcpuesto">
+                    <option value="selecciona" selected="selected">- Selecciona -</option>
+                    <option value="general">Director General</option>
+                    <option value="operaciones">Director de Operaciones</option>
+                    <option value="desarrolladorm">Desarrollador Movil</option>
+                    <option value="fe">Desarrollador FrontEnd</option>
+                    <option value="be">Desarrollador BackEnd</option>
+                    <option value="full">Desarrollador FullStack</option>
+                </select>
+            </td>
+            <td><label for="fechaingreso">Fecha de Ingreso:</label></td>
+            <td><input type="date" name="fechaingreso" id="fechaingreso"></td>
+            <td><label for="salario">Salario Diario:</label></td>
+            <td><input type="text" name="salario" id="salario"></td>
+        </tr>
+        <tr>
+            <td><label for="horario">Horario:</label></td>
+            <td>
+                <select name="slcHorario" id="slchorario">
+                    <option value="selecciona">- Selecciona -</option>
+                    <option value="">L-V 8 - 5</option>
+                    <option value="">L-V 8 - 3 y S 8 - 12</option>
+                    <option value="">L-V 3 - 10</option>
+                </select>
+            </td>
+            <td><label for="totalf">Total Faltas:</label></td>
+            <td><input type="text" name="totalf" id="totalf"></td>
+        </tr>
+    </table>
+    <br><br>
+</fieldset>
+
+<button id="bttnGuardar" type="button">Guardar</button>
+<button id="bttnCerrar" type="button" onclick="window.location.href='/Empleado/Listado'">Cerrar</button>
