@@ -8,13 +8,15 @@
 <head>
     <title>Empleado - Listado de Personal </title>
 
-<body>
+<body onload="IniciarPagina()">
     <div>
         <h2>Listado de Personal</h2>
         <br>
         <br>
         <a href="/Empleado/Registro">Agregar Empleado</a>
-        <table>
+        <br>
+        <br>
+        <table style="width: 100%;">
             <thead>
                 <tr>
                     <td>
@@ -44,65 +46,34 @@
 
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        JUANITO PEREZ
-                    </td>
-                    <td>
-                        DESARROLLADOR MOVIL
-                    </td>
-                    <td>
-                        2222-22222-222-2222
-                    </td>
-                    <td>
-                        juanitoperez@correo.com
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Consultar">Consultar</a>
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Editar">Editar</a>
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Registro">Eliminar</a>
-                    </td>
-                </tr>
 
-                <tr>
-                    <td>
-                        2
-                    </td>
-                    <td>
-                        MARIA HERNANDEZ
-                    </td>
-                    <td>
-                        DIRECTORA GENERAL
-                    </td>
-                    <td>
-                        1111-1111-1111-1111
-                    </td>
-                    <td>
-                        mariahernadez@correo.com
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Consultar">Consultar</a>
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Editar">Editar</a>
-                    </td>
-                    <td>
-                        <a href="~/Empleado/Registro">Eliminar</a>
-                    </td>
-                </tr>
-
-            </tbody>
         </table>
 
     </div>
+    <script>
+        function IniciarPagina() {
+
+            //1. OBTENER LISTA
+            //[{Empleado a},{Empleado b}, {Empleado c}] -->httpGet
+            var requestOptions = {
+                method: 'GET',
+                redirect: 'folow'
+            };
+
+            fetch("http://localhost:5003/Empleados", requestOptions)
+                .then(Response => Response.text())
+                .then(result => console.log(result))
+                .then(Error => console.log('error', error));
+
+            //2. BUSCA LA TABLA
+            //<TABLE>
+            //3. ITERA EL ARREGLO DE EMPLEADO QUE REGRESO EL SERVICIO
+            //3.1 POR CADA ITERACION ARMA UNA FILA DE LA TABLA (POR CADA EMPLEADO) 
+
+
+        }
+    </script>
+
 
 </body>
 </head>
