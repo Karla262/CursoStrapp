@@ -16,7 +16,7 @@
         <a href="/Empleado/Registro">Agregar Empleado</a>
         <br>
         <br>
-        <table style="width: 100%;">
+        <table id="tblEmpleados" style="width: 100%;">
             <thead>
                 <tr>
                     <td>
@@ -53,17 +53,67 @@
     <script>
         function IniciarPagina() {
 
-            //1. OBTENER LISTA
+            //1. OBTENER LISTA A TRAVES DEL SERVICIO DE EMPLEADOS -- RETORNA UN ARREGLO EMPLEADOS[]
             //[{Empleado a},{Empleado b}, {Empleado c}] -->httpGet
             var requestOptions = {
                 method: 'GET',
                 redirect: 'folow'
+                Headers: {
+
+                }
             };
 
-            fetch("http://localhost:5003/Empleados", requestOptions)
-                .then(Response => Response.text())
-                .then(result => console.log(result))
-                .then(Error => console.log('error', error));
+            fetch("http://localhost:5001/Empleados", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    // 1.1 SI LA PETICIÓN FUE CORRECTA
+                    //1.1.1 BUSCAR EL ELEMANTO html TABLA
+                    const tabla = document.getElementById("tblEmpleados");
+                    const tbody = tabla.querySelectorAll("tbody")[0];
+
+
+                    //1.1.2 ITERAMOS EL ARREGLO EMPLEADOS
+                    for (let i = 0; i < result.items.length; i++) {
+
+                        //1.1.2.1 POR CADA ITERACION CREAR UNA FILA EN LA TABLA
+                        const tr = document.createElement("tr");
+                        tbody.appendChild(tr);
+
+                        const td;
+                        //1.1.2.2.1 PARA LA PROPIEDAD idEmpleado CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
+                        td = document.createElement("td");
+                        td.textContent = result[i].IdEmpleado;
+                        tr.appendChild(td);
+
+                        //1.1.2.2.2 PARA LA PROPIEDAD Nombre CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
+                        td = document.createElement("td");
+                        td.textContent = result[i].nombre + ' ' + result[i].apellidoPaterno + ' ' + result[i].apellidoMaterno;
+                        tr.appendChild(td);
+
+                        //1.1.2.2.3 PARA LA PROPIEDAD Puesto CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
+                        td = document.createElement("td");
+                        td.textContent = result[i].puesto;
+                        tr.appendChild(td);
+
+                        //1.1.2.2.4 PARA LA PROPIEDAD Telefono CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
+                        td = document.createElement("td");
+                        td.textContent = result[i].telefono;
+                        tr.appendChild(td);
+
+                        //1.1.2.2.5 PARA LA PROPIEDAD Correo CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
+                        td = document.createElement("td");
+                        td.textContent = result[i].correoElectronico;
+                        tr.appendChild(td);
+
+
+                    }
+
+                })
+                .catch(error => {
+                    //1.2 SI LA PETICION FUE INCORRECTA
+                    //1.2.1 ENVIAR EL MENSAJE DE ERROR AL MOMENTO DE REALIZAR LA CONSULTA EMPLEADOS
+                    alert("Error al momento de realizar la consulta de empleados, intente mas tarde");
+                } console.log('error', error));
 
             //2. BUSCA LA TABLA
             //<TABLE>

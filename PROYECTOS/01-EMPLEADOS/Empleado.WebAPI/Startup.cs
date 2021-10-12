@@ -16,6 +16,7 @@ namespace Empleado.WebAPI
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,6 +28,14 @@ namespace Empleado.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options =>{
+                options.AddPolicy(name: "Mycors", builder => {
+                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+                           .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                });
+            });
+        
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -47,6 +56,8 @@ namespace Empleado.WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("Mycors");
 
             app.UseAuthorization();
 
