@@ -1,8 +1,6 @@
 @{
     Layout = null;
 }
-
-
 <html>
 
 <head>
@@ -24,6 +22,10 @@
                     </td>
                     <td>
                         Nombre
+                    </td>
+                    ....
+                    <td>
+                        <a href="/Empleados/Editar/1">Editar</a>
                     </td>
                     <td>
                         Puesto
@@ -79,6 +81,9 @@
                         const tr = document.createElement("tr");
                         tbody.appendChild(tr);
 
+                        var td = null;
+                        var a = null;
+
                         const td;
                         //1.1.2.2.1 PARA LA PROPIEDAD idEmpleado CREA UN td AGREGAR EL VALOR DE LA PROPIEDAD AL td Y AGREGAR EL td AL tr QUE SE ESTA CREANDO
                         td = document.createElement("td");
@@ -104,6 +109,16 @@
                         td = document.createElement("td");
                         td.textContent = result[i].correoElectronico;
                         tr.appendChild(td);
+
+                        //1.1.2.2.6 PARA EL EDITAR CREAR UN td, CREAR ANCHOR Y AGREGAR EL href /Empleado/Editar/ CON IdEmpleado
+                        td = document.createElement("td");
+                        a = document.createElement("a");
+                        a.href = "/Empleado/Editar/" + result[i].IdEmpleado;
+                        a.textContent = "Editar";
+                        td.appendChild(a);
+                        tr.appendChild(td);
+
+                        //1.1.2.2.7  PARA ELIMINAR CREAR UN td CREAR ANCHIR Y AGREGAR EL herf /eMPLEADO/Editar
 
 
                     }

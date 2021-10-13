@@ -8,7 +8,7 @@ namespace Empleado.WebAPI.Models
         public string Puesto { get; set; }
         public DateTime FechaIngreso { get; set; }
         public decimal SalarioDiario { get; set; }
-        public string NumeroSeguroSocial { get; set; }
+        public long NSS { get; set; }
         public string Horario { get; set; }
         public int TotalFaltas { get; set; }
         public bool Activo { get ; set; }

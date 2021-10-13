@@ -15,7 +15,7 @@ namespace Empleado.WebAPI.Controllers
     public class EmpleadosController : ControllerBase
     {
 
-        public static List<Models.Empleado> listEmpleado = new List<Models.Empleado>()
+        public static List<Models.Empleado> listaEmpleado = new List<Models.Empleado>()
         {
             new Models.Empleado()
             {
@@ -59,7 +59,7 @@ namespace Empleado.WebAPI.Controllers
            //2.DECLARA VARIABLE PARA LA LISTA DE EMPLEADOS ACTIVOS
            List<Models.Empleado> listaEmpleadosActivos = new List<Models.Empleado>();
            //3.OBTENER LISTA DE EMPLEADOS
-           List<Models.Empleado> lista = listEmpleado;
+           List<Models.Empleado> lista = listaEmpleado;
            //4.BUSCAR EMPLEADOS ACTIVOS (RECORRER LA LISTA DE EMPLEADOS)
            foreach (var empleado in lista)
            {
@@ -83,6 +83,8 @@ namespace Empleado.WebAPI.Controllers
             Models.Empleado ultimoEmpleado = listEmpleado.Last();
             //LE ASIGNAMOS EL ULTIMO ID
             empleado.IdEmpleado = ultimoEmpleado.IdEmpleado + 1;
+            //activamos al empleado
+            empleado.Activo = true;
             //AL NUEVO EMPLEADO LO AGREGAMOS A LA LISTA
             listEmpleado.Add(empleado);
             //RETORNAMOS AL EMPELADO AGREGADO
@@ -100,7 +102,7 @@ namespace Empleado.WebAPI.Controllers
                  Models.Empleado empleadoModificar = null;
 
                 //2. OBTENER LA LISTA
-                List<Models.Empleado> listaEmp = listEmpleado;
+                List<Models.Empleado> listaEmp = listaEmpleado;
 
                 //3. RECIBIR EL PARAMETRO DE LOS DATOS NUEVOS DEL EMPLEADO (OBJETO EMPLEADO)
 

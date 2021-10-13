@@ -38,7 +38,7 @@
             <td><input type="text" name="curp" id="curp" maxlength="18"></td>
 
             <td><label for="fechanacimiento">Fecha de nacimiento:</label></td>
-            <td><input type="date" name="nacimiento" value="nacimiento"></td>
+            <td><input type="date" name="nacimiento" id="fechanacimiento"></td>
             </td>
         </tr>
         <tr>
@@ -54,6 +54,22 @@
             <td><input type="text" name="rfc" id="rfc"></td>
             <td><label for="nns">NSS:</label></td>
             <td><input type="text" name="nss" id="nss"></td>
+        </tr>
+        <tr>
+            <td>
+                <label> for="telefono">Telefono:</label>
+            </td>
+            <td>
+                <input type="text" name="telefono" id="telefono" maxlength="18">
+            </td>
+
+            <td>
+                <label> for="correo">Correo::</label>
+            </td>
+            <td>
+                <input type="text" name="correo" id="correo" maxlength="18">
+            </td>
+
         </tr>
     </table>
     <br><br>
@@ -134,3 +150,117 @@
 
 <button id="bttnGuardar" type="button">Guardar</button>
 <button id="bttnCerrar" type="button" onclick="window.location.href='/Empleado/Listado'">Cerrar</button>
+<button type="submit"> </button>
+
+<script>
+    window.onload = function () {
+        cargar();
+    };
+    function cargar() {
+        //1. Iniciar
+        //2. Obtener el id del empleado
+        const url = window.location.pathname;
+        const arreglo = url.split("/");
+        const IdEmpleado = arreglo[3];
+
+        //3. Consumir el servicio de obtener por el id 
+        var requestOptions ={
+            method: 'GET',
+            redirect: 'folow'
+        };
+        fetq(url, requestOptions)
+        .then(response => response.JSON())
+        .then(result => {
+            console.log(result);
+    })
+
+        //
+        
+        .catch(error => {
+             console.log('error', error)
+
+    });
+
+    function guardar() {
+
+        //OBTENER VALORES DE LOS ELEMENTOS HTML
+        const nombre = document.getElementById("nombre").value;
+        const paterno = document.getElementById("paterno").value;
+        const materno = document.getElementById("materno").value;
+        const sexo = document.getElementById("slcsexo").value;
+        const curp = document.getElementById("curp").value;
+        const fechanacimiento = document.getElementById("fechanacimiento").value;
+        const telefono = document.getElementById("telefono").value;
+        const correo = document.getElementById("correo").value;
+        const rfc = document.getElementById("rfc").value;
+        const nss = document.getElementById("nss").value;
+        const calle = document.getElementById("calle").value;
+        const numeroi = document.getElementById("numeroi").value;
+        const numeroe = document.getElementById("numeroe").value;
+        const colonia = document.getElementById("colonia").value;
+        const municipio = document.getElementById("municipio").value;
+        const estado = document.getElementById("slcestado").value;
+        const cp = document.getElementById("cp").value;
+        const puesto = document.getElementById("slcpuesto").value;
+        const fechaingreso = document.getElementById("fechaingreso").value;
+        const salario = document.getElementById("salario").value;
+        const horario = document.getElementById("slchorario").value;
+        const totalFaltas = document.getElementById("totalf").value;
+
+        constnombre = document.getElementById("nombre");
+        console.log("Este es Nombre: " + nombre);
+        console.log(nombre.value);
+
+        const valor_nombre = document.getElementById("nombre").value;
+
+        alert("Estamos guardadndo 2021-10-04");
+
+        // PREPRARANDO LA CABECERA DE LA PETICION
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        // PREPARANDO EL JSON DE LA PETICION
+        var raw = JSON stringify({
+            "Nombre": nombre,
+            "ApellidoPaterno": paterno,
+            "ApellidoMaterno": materno,
+            "Sexo": sexo,
+            "CURP": curp,
+            "Telefono": telefono,
+            "CorreoElectronico": correo,
+            "FechaNacimiento": fechanacimiento,
+            "Nacionalidad": nacionalidad,
+            "RFC": rfc,
+            "Puesto": puesto,
+            "FechaIngreso": fechaingreso,
+            "salarioDiario": salario,
+            "NSS": nss,
+            "Horario": horario,
+            "TotalFaltas": totalFaltas,
+            "Direccion": {
+                "Calle": calle,
+                "NumeroExterior": numeroe,
+                "NumeroInterior": numeroi,
+                "Colonia": colonia,
+                "Municipio": municipio,
+                "Estado": estado,
+                "CodigoPostal": cp
+            }
+        });
+        console.log(raw);
+        var requestOptions = {
+            method: 'POST',
+            Headers: myHeaders,
+            body: raw,
+            redirect: 'folow'
+        };
+
+        fetch("https://localhost:5002/Empleados", requestOptions)
+            .then(response => response.text())
+            , then(result => console.log(result))
+                .catch(error => console.log('error', error));
+
+
+    }
+
+</script>
