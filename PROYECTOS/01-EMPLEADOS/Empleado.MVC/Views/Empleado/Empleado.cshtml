@@ -1,4 +1,4 @@
-<h1>Alta de personal</h1>
+<h1 id="titulo"></h1>
 <style>
     table {
         width: 100%;
@@ -153,114 +153,261 @@
 <button type="submit"> </button>
 
 <script>
+
+    var accion = "";
+
     window.onload = function () {
-        cargar();
+
+        //debugger;
+
+        //1. INICIO
+        //2.OBTENER EL PATH DE LA URL
+        const path = window.location.pathname;
+        //3.OBTENER LA ACCION A REALIZAR CON LA URL **REGISTRAR O EDITAR**
+        const arreglo = path.split("/");
+        const accionURL = arreglo[2];
+
+        //4.SI ES EDITAR
+        if (accionURL.toUpperCase() = "EDITAR") {
+            //4.1 REGISTRAR LA ACCION DE EDITAR COMO VARIABLE GLOBAL   
+            accion = "EDITAR";
+            //4.2 ACTUALIZAR EL TITULO A EDICION DE EMPLEADO
+            const titulo = document.getElementById("titulo");
+            titulo.innerHTML = 'Edicion de Empleado';
+            //4.3 CARGAR LA INFORMACION DEL EMPLEADO
+            cargar();
+        }
+        else if (accionURL.toUpperCase() == "REGISTRAR") {
+            //5.SI ES REGISTRAR
+            //5.1 REGISTAR LA ACCION DE REGISTRAR COMO VARIABLE GLOBAL
+            accion = "REGISTRAR";
+            //5.2 ACTUALIZAR EL TITULO DE ALTA EMPLEADOS
+            const titulo = document.getElementById("titulo");
+            titulo.innerHTML = 'Alta de Empleado';
+        }
+        else {
+
+            //6. SI LA OPCIÓN ES DIFERENTE DE EDITAR - REGISTRAR MANDAR UN MENSAJE DE ACCION NO VALIDA
+            alert("Accion no valida");
+        }
+        //7. FIN
     };
+
     function cargar() {
         //1. Iniciar
         //2. Obtener el id del empleado
-        const url = window.location.pathname;
-        const arreglo = url.split("/");
+        const path = window.location.pathname;
+        const arreglo = path.split("/");
         const IdEmpleado = arreglo[3];
 
         //3. Consumir el servicio de obtener por el id 
-        var requestOptions ={
+        var requestOptions = {
             method: 'GET',
             redirect: 'folow'
         };
-        fetq(url, requestOptions)
-        .then(response => response.JSON())
-        .then(result => {
-            console.log(result);
-    })
+        fetch(url, requestOptions)
+            .then(response => {
 
-        //
-        
-        .catch(error => {
-             console.log('error', error)
-
-    });
-
-    function guardar() {
-
-        //OBTENER VALORES DE LOS ELEMENTOS HTML
-        const nombre = document.getElementById("nombre").value;
-        const paterno = document.getElementById("paterno").value;
-        const materno = document.getElementById("materno").value;
-        const sexo = document.getElementById("slcsexo").value;
-        const curp = document.getElementById("curp").value;
-        const fechanacimiento = document.getElementById("fechanacimiento").value;
-        const telefono = document.getElementById("telefono").value;
-        const correo = document.getElementById("correo").value;
-        const rfc = document.getElementById("rfc").value;
-        const nss = document.getElementById("nss").value;
-        const calle = document.getElementById("calle").value;
-        const numeroi = document.getElementById("numeroi").value;
-        const numeroe = document.getElementById("numeroe").value;
-        const colonia = document.getElementById("colonia").value;
-        const municipio = document.getElementById("municipio").value;
-        const estado = document.getElementById("slcestado").value;
-        const cp = document.getElementById("cp").value;
-        const puesto = document.getElementById("slcpuesto").value;
-        const fechaingreso = document.getElementById("fechaingreso").value;
-        const salario = document.getElementById("salario").value;
-        const horario = document.getElementById("slchorario").value;
-        const totalFaltas = document.getElementById("totalf").value;
-
-        constnombre = document.getElementById("nombre");
-        console.log("Este es Nombre: " + nombre);
-        console.log(nombre.value);
-
-        const valor_nombre = document.getElementById("nombre").value;
-
-        alert("Estamos guardadndo 2021-10-04");
-
-        // PREPRARANDO LA CABECERA DE LA PETICION
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        // PREPARANDO EL JSON DE LA PETICION
-        var raw = JSON stringify({
-            "Nombre": nombre,
-            "ApellidoPaterno": paterno,
-            "ApellidoMaterno": materno,
-            "Sexo": sexo,
-            "CURP": curp,
-            "Telefono": telefono,
-            "CorreoElectronico": correo,
-            "FechaNacimiento": fechanacimiento,
-            "Nacionalidad": nacionalidad,
-            "RFC": rfc,
-            "Puesto": puesto,
-            "FechaIngreso": fechaingreso,
-            "salarioDiario": salario,
-            "NSS": nss,
-            "Horario": horario,
-            "TotalFaltas": totalFaltas,
-            "Direccion": {
-                "Calle": calle,
-                "NumeroExterior": numeroe,
-                "NumeroInterior": numeroi,
-                "Colonia": colonia,
-                "Municipio": municipio,
-                "Estado": estado,
-                "CodigoPostal": cp
-            }
-        });
-        console.log(raw);
-        var requestOptions = {
-            method: 'POST',
-            Headers: myHeaders,
-            body: raw,
-            redirect: 'folow'
-        };
-
-        fetch("https://localhost:5002/Empleados", requestOptions)
-            .then(response => response.text())
-            , then(result => console.log(result))
-                .catch(error => console.log('error', error));
+                if (response.status == 200) {
+                    // debugger;
+                    esponse.json().then(empleado => {
 
 
-    }
+                        //3.1 SI EL SERVICIO ME REGRESO EL EMPLEADO, PINTARLO EN PANTALLA
+                        //3. OBTENER LOS ELEMENTOS HTML
+                        const nombre = document.getElementById("nombre");
+                        const paterno = document.getElementById("paterno");
+                        const materno = document.getElementById("materno");
+                        const sexo = document.getElementById("slcsexo");
+                        const curp = document.getElementById("curp");
+                        const fechanacimiento = document.getElementById("fechanacimiento");
+                        const telefono = document.getElementById("telefono");
+                        const correo = document.getElementById("correo");
+                        const rfc = document.getElementById("rfc");
+                        const nss = document.getElementById("nss");
+                        const calle = document.getElementById("calle");
+                        const numeroi = document.getElementById("numeroi");
+                        const numeroe = document.getElementById("numeroe");
+                        const colonia = document.getElementById("colonia");
+                        const municipio = document.getElementById("municipio");
+                        const estado = document.getElementById("slcestado");
+                        const cp = document.getElementById("cp");
+                        const puesto = document.getElementById("slcpuesto");
+                        const fechaingreso = document.getElementById("fechaingreso");
+                        const salario = document.getElementById("salario");
+                        const horario = document.getElementById("slchorario");
+                        const totalFaltas = document.getElementById("totalf");
+
+
+
+                        //3.2 PINTAR LAS PROPIEDADES DE LOS ELEMENTOS HTML
+                        nombre.value = empleado.nombre;
+                        paterno.value = empleado.apellidoPaterno;
+                        materno.value = empleado.apelldioMaterno;
+                        sexo.value = empleado.sexo;
+                        curp.value = empleado.curp;
+                        fechanacimiento.value = empleado.FechaNacimiento;
+                        nacionalidad.value = empleado.nacionalidad;
+                        telefono.value = empleado.telefono;
+                        correo.value = empleado.correoElectronico;
+                        rfc.value = empleado.rfc;
+                        nss.value = empleado.nss;
+                        calle.value = empleado.direccion.Calle;
+                        numeroi.value = empleado.direccion.NumeroInterior;
+                        numeroe.value = empleado.direccion.NumeroExterior;
+                        colonia.value = empleado.direccion.colonia;
+                        municipio.value = empleado.direccion.municipio;
+                        estado.value = empleado.direccion.estado;
+                        cp.value = empleado.direccion.CodigoPostal;
+                        puesto.value = empleado.puesto;
+                        fechaingreso.value = obtenerFecha(empleado.FechaIngreso);
+                        salario.value = empleado.salarioDiario;
+                        horario.value = empleado.horario;
+                        totalFaltas.value = empleado.totalFaltas;
+                    });
+
+                }
+                else {
+                    //debugger;
+                    //3.2 SI EL SERVICIO NO REGRESO EL EMPELADO, PINTAR EL MENSAJE DE NO ENCONTRADO EN PANTALLA
+                    alert("No se encontro el empleado, contactar al administrador");
+                    console.log("No se encontro el empleado, contactar al administrador", response);
+                }
+
+
+            .catch (error => {
+                    //3.3 SI HUBO UN ERROR, MOSTRAR EL MENSAJE DE ERROR EN LA PANTALLA
+                    alert("Ocurrio un error, contactar al administrador");
+                    console.log("Ocurrio un error, contactar al administrador", response);
+
+                });
+        //4. FIN
+
+        function obtenerFecha(fecha) {
+
+            @* var date = new Date(fecha);
+                    var anio = date.getFullYear;
+
+                    var mes = "" + date.getMonth() + 1;
+                    mes = mes.padStart(2, "0");*@
+
+                fecha = fecha.substring(0, 10);
+            console.log(fecha);
+
+            return fecha;
+
+
+
+            @* var fecha = new Date(empleado.FechaNacimiento);
+                    console.log("esta es la fecha");
+                    console.log(date.getFullYear());
+                    console.log(date.getMonth());
+                    console.log(date.getDate());
+                    console.log(date.getFullYear() + "-" +  (date.getMonth() + 1) + "-" + date.getDate());
+
+                    return date.getFullYear() + "-0" +  (date.getMonth() + 1) + "-" + date.getDate();*@
+        }
+
+
+        function guardar() {
+
+            //1. INICIO
+            //2. OBTENER LA ACCION DE EDTIAR O REGISTRAR
+            //3. SI ES **EDITAR**
+            //3.1 OBTENER TODOS LOS ELEMENTOS HTML
+            //3.2 OBTENER LOS VALORES DE LOS ELEMENTOS HTML
+            //3.3 CREAR LA PETICION *JSON* AL REALIZAR
+            //3.4 REALIZAR LA PETICION AL SERVICIO EDITAR 
+            //3.5 SI SE GUARDO CORRECTAMENTE MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+            //3.6 SI NO SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+            //4. SI ES **REGISTRO**
+            //4.1 OBTENER TODOS LOS ELEMENTOS HTML
+            //4.2 OBTENER LOS VALORES DE LOS ELEMENTOS HTML
+            //4.3 CREAR LA PETICION JSON AL REALIZAR
+            //4.4 REALIZAR LA PETICION AL SERVICIO DE REGISTRA
+            //4.5 SI SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+            //4.6 SI NO SE GUARDO CORRECTAMENTE MANDAR MENSAJE DE QUE LOS DATOS NO SE GUARDARON CORRECTAMENTE, CONTACTE AL ADMINISTRADOR
+            //5. FIN
+
+            //OBTENER VALORES DE LOS ELEMENTOS HTML
+            const nombre = document.getElementById("nombre").value;
+            const paterno = document.getElementById("paterno").value;
+            const materno = document.getElementById("materno").value;
+            const sexo = document.getElementById("slcsexo").value;
+            const curp = document.getElementById("curp").value;
+            const fechanacimiento = document.getElementById("fechanacimiento").value;
+            const nacionalidad = document.getElementById("slcnacionalidad");
+            const telefono = document.getElementById("telefono").value;
+            const correo = document.getElementById("correo").value;
+            const rfc = document.getElementById("rfc").value;
+            const nss = document.getElementById("nss").value;
+            const calle = document.getElementById("calle").value;
+            const numeroi = document.getElementById("numeroi").value;
+            const numeroe = document.getElementById("numeroe").value;
+            const colonia = document.getElementById("colonia").value;
+            const municipio = document.getElementById("municipio").value;
+            const estado = document.getElementById("slcestado").value;
+            const cp = document.getElementById("cp").value;
+            const puesto = document.getElementById("slcpuesto").value;
+            const fechaingreso = document.getElementById("fechaingreso").value;
+            const salario = document.getElementById("salario").value;
+            const horario = document.getElementById("slchorario").value;
+            const totalFaltas = document.getElementById("totalf").value;
+
+            constnombre = document.getElementById("nombre");
+            console.log("Este es Nombre: " + nombre);
+            console.log(nombre.value);
+
+            const valor_nombre = document.getElementById("nombre").value;
+
+            alert("Estamos guardadndo 2021-10-04");
+
+            // PREPRARANDO LA CABECERA DE LA PETICION
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            // PREPARANDO EL JSON DE LA PETICION
+            var raw = JSON stringify({
+                "Nombre": nombre,
+                "ApellidoPaterno": paterno,
+                "ApellidoMaterno": materno,
+                "Sexo": sexo,
+                "CURP": curp,
+                "Telefono": telefono,
+                "CorreoElectronico": correo,
+                "FechaNacimiento": fechanacimiento,
+                "Nacionalidad": nacionalidad,
+                "RFC": rfc,
+                "Puesto": puesto,
+                "FechaIngreso": fechaingreso,
+                "salarioDiario": salario,
+                "NSS": nss,
+                "Horario": horario,
+                "TotalFaltas": totalFaltas,
+                "Direccion": {
+                    "Calle": calle,
+                    "NumeroExterior": numeroe,
+                    "NumeroInterior": numeroi,
+                    "Colonia": colonia,
+                    "Municipio": municipio,
+                    "Estado": estado,
+                    "CodigoPostal": cp
+                }
+            });
+            console.log(raw);
+            var requestOptions = {
+                method: 'POST',
+                Headers: myHeaders,
+                body: raw,
+                redirect: 'folow'
+            };
+
+            fetch("https://localhost:5002/Empleados", requestOptions)
+                .then(response => response.text())
+                , then(result => console.log(result))
+                    .catch(error => console.log('error', error));
+
+
+        }
 
 </script>

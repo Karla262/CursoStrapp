@@ -39,4 +39,4 @@ C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\Empleado.MVC.genruntimeconfig.cache
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\Empleado.MVC.csproj.CopyComplete
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\Razor\Views\Empleado\Listado.cshtml.g.cs
-C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\Razor\Views\Empleado\Registro.cshtml.g.cs
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.MVC\obj\Debug\net5.0\Razor\Views\Empleado\Empleado.cshtml.g.cs
