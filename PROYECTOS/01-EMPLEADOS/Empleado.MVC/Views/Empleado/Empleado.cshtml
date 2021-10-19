@@ -57,14 +57,14 @@
         </tr>
         <tr>
             <td>
-                <label> for="telefono">Telefono:</label>
+                <label for="telefono">Telefono:</label>
             </td>
             <td>
                 <input type="text" name="telefono" id="telefono" maxlength="18">
             </td>
 
             <td>
-                <label> for="correo">Correo::</label>
+                <label for="correo">Correo::</label>
             </td>
             <td>
                 <input type="text" name="correo" id="correo" maxlength="18">
@@ -155,6 +155,7 @@
 <script>
 
     var accion = "";
+    var IdEmpleado = 0;
 
     window.onload = function () {
 
@@ -283,6 +284,8 @@
                 });
         //4. FIN
 
+
+
         function obtenerFecha(fecha) {
 
             @* var date = new Date(fecha);
@@ -296,8 +299,6 @@
 
             return fecha;
 
-
-
             @* var fecha = new Date(empleado.FechaNacimiento);
                     console.log("esta es la fecha");
                     console.log(date.getFullYear());
@@ -309,27 +310,10 @@
         }
 
 
-        function guardar() {
 
-            //1. INICIO
-            //2. OBTENER LA ACCION DE EDTIAR O REGISTRAR
-            //3. SI ES **EDITAR**
-            //3.1 OBTENER TODOS LOS ELEMENTOS HTML
-            //3.2 OBTENER LOS VALORES DE LOS ELEMENTOS HTML
-            //3.3 CREAR LA PETICION *JSON* AL REALIZAR
-            //3.4 REALIZAR LA PETICION AL SERVICIO EDITAR 
-            //3.5 SI SE GUARDO CORRECTAMENTE MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
-            //3.6 SI NO SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
-            //4. SI ES **REGISTRO**
-            //4.1 OBTENER TODOS LOS ELEMENTOS HTML
-            //4.2 OBTENER LOS VALORES DE LOS ELEMENTOS HTML
-            //4.3 CREAR LA PETICION JSON AL REALIZAR
-            //4.4 REALIZAR LA PETICION AL SERVICIO DE REGISTRA
-            //4.5 SI SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
-            //4.6 SI NO SE GUARDO CORRECTAMENTE MANDAR MENSAJE DE QUE LOS DATOS NO SE GUARDARON CORRECTAMENTE, CONTACTE AL ADMINISTRADOR
-            //5. FIN
-
-            //OBTENER VALORES DE LOS ELEMENTOS HTML
+        function ObtenerPeticion() {
+            //1 INICIO
+            //2 OBTENER TODOS LOS ELEMENTOS HTML Y OBTENER LOS VALORES DE LOS ELEMENTOS HTML
             const nombre = document.getElementById("nombre").value;
             const paterno = document.getElementById("paterno").value;
             const materno = document.getElementById("materno").value;
@@ -354,60 +338,140 @@
             const horario = document.getElementById("slchorario").value;
             const totalFaltas = document.getElementById("totalf").value;
 
-            constnombre = document.getElementById("nombre");
-            console.log("Este es Nombre: " + nombre);
-            console.log(nombre.value);
-
-            const valor_nombre = document.getElementById("nombre").value;
-
-            alert("Estamos guardadndo 2021-10-04");
-
-            // PREPRARANDO LA CABECERA DE LA PETICION
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-
-            // PREPARANDO EL JSON DE LA PETICION
-            var raw = JSON stringify({
-                "Nombre": nombre,
-                "ApellidoPaterno": paterno,
-                "ApellidoMaterno": materno,
-                "Sexo": sexo,
-                "CURP": curp,
-                "Telefono": telefono,
-                "CorreoElectronico": correo,
-                "FechaNacimiento": fechanacimiento,
-                "Nacionalidad": nacionalidad,
-                "RFC": rfc,
-                "Puesto": puesto,
-                "FechaIngreso": fechaingreso,
+            //4 CREAR LA PETICION JSON A REALIZAR
+            var raw = JSON.stringify({
+                "IdEmpleado": IdEmpleado,
+                "rfc": rfc,
+                "puesto": puesto,
+                "fechaIngreso": fechaingreso,
                 "salarioDiario": salario,
-                "NSS": nss,
-                "Horario": horario,
-                "TotalFaltas": totalFaltas,
-                "Direccion": {
-                    "Calle": calle,
-                    "NumeroExterior": numeroe,
-                    "NumeroInterior": numeroi,
-                    "Colonia": colonia,
-                    "Municipio": municipio,
-                    "Estado": estado,
-                    "CodigoPostal": cp
+                "nss": nss,
+                "horario": horario,
+                "totalFaltas": totalFaltas,
+                "activo": true,
+                "nombre": nombre,
+                "apellidoPaterno": paterno,
+                "apellidoMaterno": materno,
+                "sexo": sexo,
+                "curp": curp,
+                "telefono": telefono,
+                "correoElectronico": correo,
+                "fechaNacimiento": fechanacimiento,
+                "nacionalidad": nacionalidad,
+                "direccion": {
+                    "calle": calle,
+                    "numeroExterior": numeroe,
+                    "numeroInterior": numeroi,
+                    "colonia": colonia,
+                    "municipio": municipio,
+                    "estado": estado,
+                    "codigoPostal": cp
                 }
             });
-            console.log(raw);
-            var requestOptions = {
-                method: 'POST',
-                Headers: myHeaders,
-                body: raw,
-                redirect: 'folow'
-            };
 
-            fetch("https://localhost:5002/Empleados", requestOptions)
-                .then(response => response.text())
-                , then(result => console.log(result))
-                    .catch(error => console.log('error', error));
+            return raw;
 
-
+            //5 FIN
         }
+
+
+        function guardar() {
+
+            //debugger;
+
+            //1. INICIO
+            //2. OBTENER LA ACCION DE EDTIAR O REGISTRAR
+            if (accion == "EDITAR") {
+
+                console.log("ACCION EDITAR");
+
+                //3. SI ES **EDITAR**
+                //3.1 OBTENER LA PETICION A TRAVES DEL METODO OBTENERPETICION
+                var raw = ObtenerPeticion();
+
+                //3.2 CREAR Y REALIZAR LA PETICION AL SERVICIO DE EDITAR
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+
+                var requestOptions = {
+                    metod: 'PUT',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+
+                fetch("https://localhost:5002/Empleados", requestOptions)
+                    .then(response => {
+
+                        if (response.status == 200) {
+                            //3.4 SI SE GUARDO CORRECTAMENTE MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+                            alert("Los datos se guardaron correctamente");
+                        }
+                        else {
+                            //3.5 SI NO SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+                            alert("Los datos no se guardaron correctamente, contacte al administrador");
+                            console.log("Los datos no se guardaron correctamente", response);
+                        }
+                    })
+
+                    .catch(error => {
+
+                        //3.6 SI NO SE PUDO REALIZAR LA CONEXION AL SERVICIO MANDAR MENSAJE DE QUE NO SE PUDO
+                        // REALIZAR LA ACCION, CONTACTE AL ADMINISTRADOR
+                        alert("No se pudo realizar la accion, contacte al administrador");
+                        console.log("No se pudo realizar la accion", response);
+
+                    });
+            }
+
+
+            else if (accion == "REGISTRO") {
+                console.log("ACCION REGISTRO");
+                //4. SI ES **REGISTRO**
+                var raw = ObtenerPeticion();
+                //4.1 OBTENER LA PETICION A TRAVES DEL METODO 
+
+                //4.4 CREAR Y REALIZAR LA PETICION AL SERVICIO DE REGISTRA
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+
+                var requestOptions = {
+                    metod: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+
+                fetch("https://localhost:5002/Empleados", requestOptions)
+                    .then(response => {
+
+                        if (response.status == 200) {
+                            //4.5 SI SE GUARDO CORRECTAMENTE, MANDAR EL MENSAJE DE QUE LOS DATOS SE GUARDARON CORRECTAMENTE
+                            alert("Los datos se guardaron correctamente");
+                        }
+                        else {
+                            //4.6 SI NO SE GUARDO CORRECTAMENTE MANDAR MENSAJE DE QUE LOS DATOS NO SE GUARDARON CORRECTAMENTE, CONTACTE AL ADMINISTRADOR
+                            alert("Los datos no se guardaron correctamente, contacte al administrador");
+                            console.log("No se pudo realizar la accion", response);
+                        }
+
+                    })
+                    .catch(error => {
+
+                        //4.7 SI NO SE PUDO REALIZr la conexion al servicio mandar mensaje de que no se pudo realizar, contacte al administrador
+                        alert("NO SE PUDO REALIZAR LA ACCION,CONTACTE AL ADMINISTRADOR");
+                        console.log("NO SE PUDO REALIZAR LA ACCION,CONTACTE AL ADMINISTRADOR", response);
+                    });
+
+
+            }
+            else {
+                console.log("ACCION NO VALIDA");
+                // 5.SI NO ES EDITAR Y TAMPOCO REGISTRO
+                // 5.1 MANDAR MENSAJE DE ERRROR DE ACCION NO VALIDA
+                alert("ACCION NO VALIDA");
+                //6. FIN
+
+            }
 
 </script>

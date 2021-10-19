@@ -77,16 +77,22 @@ namespace Empleado.WebAPI.Controllers
 
 
         [HttpPost]
-        public Models.Empleado Crear (Models.Empleado empleado)
+         public async Task<ActionResult<Models.Empleado>> Crear(Models.Empleado empleado)
         {
+            int number;
+            bool parseoExitoso = int.TryParse(empleado.Direccion.CodigoPostal, out number);
+            if(parseoExitoso == false){
+                return BadRequest();
+            }
+
             //OBTENER EL ULTIMO EMPLEADO DE LA LISTA
-            Models.Empleado ultimoEmpleado = listEmpleado.Last();
+            Models.Empleado ultimoEmpleado = listaEmpleado.Last();
             //LE ASIGNAMOS EL ULTIMO ID
             empleado.IdEmpleado = ultimoEmpleado.IdEmpleado + 1;
             //activamos al empleado
             empleado.Activo = true;
             //AL NUEVO EMPLEADO LO AGREGAMOS A LA LISTA
-            listEmpleado.Add(empleado);
+            listaEmpleado.Add(empleado);
             //RETORNAMOS AL EMPELADO AGREGADO
             return empleado;
         }
@@ -129,9 +135,27 @@ namespace Empleado.WebAPI.Controllers
                 {
                    //5. SI EL EMPLEADO FUE ENCONTRADO
                     //5.1 MODIFICAR LOS DATOS DEL EMPLEADO ENCONTRADO CON LOS DATOS NUEVOS DEL EMPLEADO
-                    empleadoModificar.Nombre = empleado.Nombre;
+                    empleadoModificar.IdEmpleado = empleado.IdEmpleado;
+                    empleadoModificar.RFC = empleado.RFC;
+                    empleadoModificar.Puesto = empleado.Puesto;
+                    empleadoModificar.FechaIngreso = empleado.FechaIngreso;
+                    empleadoModificar.SalarioDiario = empleado.SalarioDiario;
+                    empleadoModificar.NSS = empleado.NSS;
+                    empleadoModificar.Horario = empleado.Horario;
+                    empleadoModificar.TotalFaltas = empleado.TotalFaltas;
+                    empleadoModificar.Activo = empleado.Activo;
+                    empleadoModificar.IdPersona = empleado.IdPersona;
                     empleadoModificar.ApellidoPaterno = empleado.ApellidoPaterno;
                     empleadoModificar.ApellidoMaterno = empleado.ApellidoMaterno;
+                    empleadoModificar.Sexo = empleado.Sexo;
+                    empleadoModificar.CURP = empleado.CURP;
+                    empleadoModificar.Telefono = empleado.Telefono;
+                    empleadoModificar.CorreoElectronico = empleado.CorreoElectronico;
+                    empleadoModificar.FechaNacimiento = empleado.FechaNacimiento;
+                    empleadoModificar.Nacionalidad = empleado.Nacionalidad;
+                    empleadoModificar.Direccion = empleado.Direccion;
+
+
                 }
 
                 //6. REGRESA EL EMPLEADO MOFICICADO
@@ -149,10 +173,10 @@ namespace Empleado.WebAPI.Controllers
             //3. RECIBIR PARAMETRO idEmpleado (A BUSCAR)
 
             //4. OBTENER LA LISTA
-            List<Models.Empleado> Lista = listEmpleado;
+            List<Models.Empleado> Lista = listaEmpleado;
 
             //5. BUSCA EL EMPLEADO POR idEmpleado EN LA LISTA EMPLEADO
-            foreach (Models.Empleado iEmpleado in listEmpleado)
+            foreach (Models.Empleado iEmpleado in listaEmpleado)
             {
                 //5.1SI EL idEmpleado QUE SE ESTA ITERANDO ES IGUAL AL idEmpleado QUE SE RECIBIO POR PARMETRO
                 if (iEmpleado.IdEmpleado == IdEmpleado)
@@ -185,7 +209,7 @@ namespace Empleado.WebAPI.Controllers
             //3. DECLARA VARIABLE EL EMPLEADO A ELIMINAR
             Models.Empleado empleadoEliminar = null;
             //4. OBTENER LISTA
-            List<Models.Empleado> lista = listEmpleado;
+            List<Models.Empleado> lista = listaEmpleado;
             //5. BUSCAR AL EMPLEADO A ELIMINAR (RECORRER LA LISTA)
             foreach (var empleado in lista)
             {
