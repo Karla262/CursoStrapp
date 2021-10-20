@@ -36,5 +36,49 @@ namespace MvcDapper.Controllers
             }
             return View(customers);
         }
+
+        // GET: Customer/Details/5
+        public ActionResult Details(int id)
+        {
+            Customer customer = new Customer();
+            string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+            using (IDbConnection db = new SqlConnection(cadenaConexion))
+            {
+                string query = "Select * From Customers WHERE CustomerID =" + id;
+                customer = db.Query<Customer>(query, new { id }).SingleOrDefault();
+            }
+
+            return View(customer);
+        }
+
+        // GET: Customer/Create
+            public ActionResult Create()
+            {
+                return View();
+            }
+
+        // POST: Customer/Create
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            try
+            {
+                string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+                using (IDbConnection db = new SqlConnection(cadenaConexion))
+                {
+                    string sqlQuery = "Insert Into Customers (FirstName, LastName, Email) Values(@FirstName, @LastName, @Email)";
+
+                    int rowsAffected = db.Execute(sqlQuery, customer);
+                }
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+}
+
+
     }
 }

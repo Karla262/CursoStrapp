@@ -46,3 +46,5 @@ C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\bin\Debug\net5.0\runtimes\
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
+C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Details.cshtml.g.cs
+C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs

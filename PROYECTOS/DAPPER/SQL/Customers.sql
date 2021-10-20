@@ -1,4 +1,4 @@
-CREATE TABLE [dbo.[Customers](
+CREATE TABLE [dbo].[Customers](
 [CustomerID] INT   IDENTITY (1, 1) NOT NULL,
 [FirstName] NVARCHAR (MAX) NULL,
 [LastName] NVARCHAR (MAX) NULL,
@@ -6,4 +6,5 @@ CREATE TABLE [dbo.[Customers](
 CONSTRAINT [PK_dbo.Customers] PRIMARY KEY CLUSTERED ([CustomerID] ASC)
 );
 
-SELECT * FROM [dbo.[Customers]
+SELECT * FROM [dbo].[Customers]
+

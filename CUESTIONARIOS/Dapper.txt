@@ -1,0 +1,32 @@
+INSERTAR---------
+string sql = "INSERT INTO Customers (FirstName, LastName, Email) VALUE ('Carson', 'Alexandre','carson.alexander@example.com);";
+{
+	var affectedRows = connection.Execute(sql);
+}
+
+ACTUALIZAR--------
+//GET: Customer/Details/5 
+public ActionResult Details(int id)
+{
+	customer = db.Query<Customer>("Select * From Customers WHERE CustomerID =" + id, new { id }).SingleOrDefault();
+}
+return View(customer);
+}
+INSERTAR----------
+//POST: Customer/Create
+[httpPost]
+public ActionResult create(Customer customer)
+{
+try{
+using (IDbConecction db = new SqlConnetion(ConfigurationManager.ConnectionStrings["CustomerConnection"].ConnectionString))
+{
+string sqlQuery= "Insert Into Customers (FirstName, LastName, Email) Values(@FirstName, @LastName, @Email)";
+int rowsAffected = db.Execute(sqlQuery, customer);
+}
+return RedirectToAction("Index");
+} catch
+{
+return View();
+}
+}
+
