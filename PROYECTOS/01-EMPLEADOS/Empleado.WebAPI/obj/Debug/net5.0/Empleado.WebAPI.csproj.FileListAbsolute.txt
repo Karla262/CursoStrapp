@@ -27,3 +27,14 @@ C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\obj\Debug\net5
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\obj\Debug\net5.0\ref\Empleado.WebAPI.dll
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\obj\Debug\net5.0\Empleado.WebAPI.pdb
 C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\obj\Debug\net5.0\Empleado.WebAPI.genruntimeconfig.cache
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\Dapper.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\richa\CursoStrapp\PROYECTOS\01-EMPLEADOS\Empleado.WebAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

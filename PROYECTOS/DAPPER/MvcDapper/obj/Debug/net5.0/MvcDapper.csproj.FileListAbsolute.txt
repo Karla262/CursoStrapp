@@ -48,3 +48,5 @@ C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\bin\Debug\net5.0\runtimes\
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Details.cshtml.g.cs
 C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs
+C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Edit.cshtml.g.cs
+C:\Users\richa\CursoStrapp\PROYECTOS\DAPPER\MvcDapper\obj\Debug\net5.0\Razor\Views\Customer\Delete.cshtml.g.cs

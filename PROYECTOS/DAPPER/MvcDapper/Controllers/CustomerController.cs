@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using Dapper;
+using Microsoft.AspNetCore.Http;
 
 
 namespace MvcDapper.Controllers
@@ -73,11 +74,83 @@ namespace MvcDapper.Controllers
 
                 return RedirectToAction("Index");
             }
+            catch(Exception ex)
+            {
+                ViewBag.Error = ex.ToString();
+                return View();
+            }
+        }
+
+                // GET: Customer/Edit/5
+            public ActionResult Edit(int id)
+            {
+            Customer customer = new Customer();
+            string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+            using (IDbConnection db = new SqlConnection(cadenaConexion))
+            {
+                customer = db.Query<Customer>("Select * From Customers WHERE CustomerID =" + id, new { id }).SingleOrDefault();
+            }
+            return View(customer);
+        }
+
+        // POST: Customer/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, Customer customer)
+        {
+            try
+            {
+                string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+                using (IDbConnection db = new SqlConnection(cadenaConexion))
+                {
+                    string sqlQuery = "UPDATE Customers set FirstName='" + customer.FirstName + 
+                        "',LastName='" + customer.LastName + 
+                        "',Email='" + customer.Email + 
+                        "' WHERE CustomerID=" + customer.CustomerID;
+
+                    int rowsAffected = db.Execute(sqlQuery);
+                }
+
+                return RedirectToAction("Index");
+            }
             catch
             {
                 return View();
             }
-}
+        }
+
+            // GET: Customer/Delete/5
+            public ActionResult Delete(int id)
+            {
+                Customer customer = new Customer();
+                string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+                using (IDbConnection db = new SqlConnection(cadenaConexion))
+                {
+                    customer = db.Query<Customer>("Select * From Customers WHERE CustomerID =" + id, new { id }).SingleOrDefault();
+                }
+                return View(customer);
+            }
+
+            // POST: Customer/Delete/5
+            [HttpPost]
+            public ActionResult Delete(int id, IFormCollection collection)
+            {
+                try
+                {
+                    string cadenaConexion = configuration.GetConnectionString("CustomerConnection");
+                    using (IDbConnection db = new SqlConnection(cadenaConexion))
+                    {
+                        string sqlQuery = "Delete From Customers WHERE CustomerID = " + id;
+
+                        int rowsAffected = db.Execute(sqlQuery);
+                    }
+
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
 
 
     }
