@@ -18,36 +18,7 @@ namespace Empleado.WebAPI.Controllers
     public class EmpleadosController : ControllerBase
     {
 
-        public static List<Models.Empleado> listEmpleado = new List<Models.Empleado>()
-        {
-            new Models.Empleado()
-            {
-            IdEmpleado = 1,
-            Nombre = "JUANIITO",
-            ApellidoPaterno = "PEREZ",
-            ApellidoMaterno = "PEREZ",
-            Sexo = 'M',
-            Activo = true,
-            Puesto = "GERENTE DE OPERACIONES",
-            Telefono = "2222498091",
-            CorreoElectronico = "juanito.perez@correo.com"
-            },
-
-            new Models.Empleado()
-            {
-            IdEmpleado = 2,
-            Nombre = "MARÍA",
-            ApellidoPaterno = "HERNANDEZ",
-            ApellidoMaterno = "HERNANDEZ",
-            Sexo = 'F',
-            Activo = true,
-            Puesto = "GERENTE DE ADMINISTRACION",
-            Telefono = "3332897451",
-            CorreoElectronico = "maria.hernandez@correo.com"
-            }
-        };
-
-
+        public static List<Models.Empleado> listEmpleado = new List<Models.Empleado>();
         private readonly ILogger<EmpleadosController> _logger;
 
         private readonly IConfiguration _configuration;
@@ -68,8 +39,10 @@ namespace Empleado.WebAPI.Controllers
             //1. INICIO
             //2.DECLARA VARIABLE PARA LA LISTA DE EMPLEADOS ACTIVOS
             List<Models.Empleado> listaEmpleadosActivos = new List<Models.Empleado>();
+
             //3.OBTENER LISTA DE EMPLEADOS
             List<Models.Empleado> lista = empleadoDA.ObtenerEmpleados();
+
             //4.BUSCAR EMPLEADOS ACTIVOS (RECORRER LA LISTA DE EMPLEADOS)
             foreach (var empleado in lista)
             {
@@ -89,25 +62,17 @@ namespace Empleado.WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Models.Empleado>> Crear(Models.Empleado empleado)
         {
-            int number;
-            bool parseoExitoso = int.TryParse(empleado.Direccion.CodigoPostal, out number);
-            if (parseoExitoso == false)
-            {
-                return BadRequest();
-            }
-
-            //OBTENER EL ULTIMO EMPLEADO DE LA LISTA
-            Models.Empleado ultimoEmpleado = listEmpleado.Last();
-            //LE ASIGNAMOS EL ULTIMO ID
-            empleado.IdEmpleado = ultimoEmpleado.IdEmpleado + 1;
-            //activamos al empleado
+            //1. Inicio
+            //2. Recibir parametros de entrada
+            //3. Activar el empleado
             empleado.Activo = true;
-            //AL NUEVO EMPLEADO LO AGREGAMOS A LA LISTA
-            listEmpleado.Add(empleado);
-            //RETORNAMOS AL EMPELADO AGREGADO
+
+            //4. Ejecutamos metodo crearempleado enviando el empleado a crear 
+            empleado = empleadoDA.Crear(empleado);
+
+            //5. Retornar el empleado
             return empleado;
         }
-
 
 
         [HttpPut]
@@ -164,7 +129,7 @@ namespace Empleado.WebAPI.Controllers
                 empleadoModificar.CorreoElectronico = empleado.CorreoElectronico;
                 empleadoModificar.FechaNacimiento = empleado.FechaNacimiento;
                 empleadoModificar.Nacionalidad = empleado.Nacionalidad;
-                empleadoModificar.Direccion = empleado.Direccion;
+                empleadoModificar.direccion = empleado.direccion;
 
 
             }
@@ -175,7 +140,7 @@ namespace Empleado.WebAPI.Controllers
 
         }
 
-        [HttpGet]
+        [HttpGet("{IdEmpleado}")]
         public async Task<ActionResult<Models.Empleado>> ObtenerPorIdEmpleado(int IdEmpleado)
         {
             //1. INICIO

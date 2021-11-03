@@ -13,6 +13,6 @@ namespace Empleado.WebAPI.Models
         public string CorreoElectronico { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Nacionalidad { get; set; }
-        public Direccion Direccion { get; set; }
+        public Direccion direccion { get; set; }
     }
 }
